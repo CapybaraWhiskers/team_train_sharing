@@ -1,4 +1,4 @@
-### GPT回答
+# GPT回答
 re環境でのリソース作成からEntra ID（旧Azure AD）のアプリ登録、VM構築までの手順をREADMEに追記しました。特に以下をカバーしています。
 
 * **リソースグループ作成**：`az group create`
@@ -10,7 +10,7 @@ re環境でのリソース作成からEntra ID（旧Azure AD）のアプリ登�
 
 <br><br><br>
 
-### スキャホールド（アプリケーションの足場・骨組み）
+# スキャホールド（アプリケーションの足場・骨組み）
 ```bash
 # プロジェクト構成
 overall-attendance-report-system/
