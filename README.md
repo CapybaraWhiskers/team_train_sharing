@@ -1,11 +1,10 @@
-Azure App Service (Web Apps) — PaaS
-フルマネージドのプラットフォーム上で Web アプリや API をデプロイ／スケーリングできる。
+勤怠打刻と日報投稿を行う簡易的なWebシステム
 
-Azure Static Web Apps — PaaS
-静的サイト向けに最適化され、グローバル CDN や GitHub Actions 連携が標準で利用できる。 
+.env でAPIホストやポートを設定し、Flaskのバックエンドでは以下のエンドポイントを提供しています。
+POST /attendance/clock-in と POST /attendance/clock-out: それぞれ打刻情報をSQLiteに保存し、タイムスタンプを返す
+POST /report/: Markdown形式のレポートを保存
+GET /reports: 保存済みレポート一覧をJSONで返す
 
-Azure Virtual Machines — IaaS
-仮想マシンを丸ごと制御したい場合に利用。OS のパッチ適用や設定は自分で管理する。
+フロントエンドの index.html には、打刻ボタンとMarkdown入力欄、送信したレポート一覧を表示する領域が用意されています。
+また、docker-compose.yml でFlaskバックエンドとNginxフロントエンドをまとめて起動できるよう定義されています。
 
-Azure Container Instances — PaaS
-サーバーレスでコンテナを起動でき、インフラ管理の手間が不要である。
